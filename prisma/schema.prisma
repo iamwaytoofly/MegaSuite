@@ -14,6 +14,7 @@ model User {
   createdAt DateTime @default(now())
   entries   Entry[]
 }
+}
 
 model Entry {
   id        String   @id @default(uuid())
@@ -22,3 +23,6 @@ model Entry {
   text      String
   type      String
   User      User     @relation(fields: [userId], references: [id])
+
+  @@map("entries")
+}
