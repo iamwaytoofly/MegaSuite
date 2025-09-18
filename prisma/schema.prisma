@@ -22,4 +22,3 @@ model Entry {
   text      String
   type      String
   User      User     @relation(fields: [userId], references: [id])
-}
