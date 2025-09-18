@@ -14,7 +14,6 @@ model User {
   createdAt DateTime @default(now())
   entries   Entry[]
 }
-}
 
 model Entry {
   id        String   @id @default(uuid())
